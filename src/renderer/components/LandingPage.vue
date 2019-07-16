@@ -26,15 +26,23 @@
         </div>
       </div>
     </main>
+    <div class="columns">
+        <dataset-loader class="is-one-quarter"></dataset-loader>
+        <dataset-loader></dataset-loader>
+    </div>
   </div>
 </template>
 
 <script>
   import SystemInformation from './LandingPage/SystemInformation'
+  import DatasetLoader from './LandingPage/DatasetLoader'
 
   export default {
     name: 'landing-page',
-    components: { SystemInformation },
+    components: {
+      SystemInformation,
+      DatasetLoader
+    },
     methods: {
       open (link) {
         this.$electron.shell.openExternal(link)
