@@ -1,6 +1,6 @@
 {
   "name": "my-project",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "author": "gustavovelascoh <gustavo.velascoh@gmail.com>",
   "description": "An electron-vue project",
   "license": null,
@@ -58,6 +58,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bulma": "^0.7.5",
+    "d3": "^5.9.7",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
     "vue-router": "^3.0.1",
