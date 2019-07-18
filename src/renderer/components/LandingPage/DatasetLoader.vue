@@ -35,7 +35,9 @@
     data: () => ({
       text: '',
       valid: true,
-      dataset: {}
+      dataset: {},
+      ds_cols: 0,
+      ds_rows: 0
     }),
     components: {FileReader},
     methods: {

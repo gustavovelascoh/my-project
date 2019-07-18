@@ -1,33 +1,13 @@
 <template>
   <div id="wrapper">
     <img id="logo" src="~@/assets/logo.png" alt="electron-vue">
-    <main>
-      <div class="left-side">
-        <span class="title">
-          Welcome to your new project!
-        </span>
-        <system-information></system-information>
-      </div>
-
-      <div class="right-side">
-        <div class="doc">
-          <div class="title">Getting Started</div>
-          <p>
-            electron-vue comes packed with detailed documentation that covers everything from
-            internal configurations, using the project structure, building your application,
-            and so much more.
-          </p>
-          <button @click="open('https://simulatedgreg.gitbooks.io/electron-vue/content/')">Read the Docs</button><br><br>
-        </div>
-        <div class="doc">
-          <div class="title alt">Other Documentation</div>
-          <button class="alt" @click="open('https://electron.atom.io/docs/')">Electron</button>
-          <button class="alt" @click="open('https://vuejs.org/v2/guide/')">Vue.js</button>
-        </div>
-      </div>
-    </main>
+    <div class="title"> EXAMPLE APP USING ELECTRON+VUE+D3.JS </div>
+    <div class="subtitle"> Self monitor app </div>
     <div class="columns">
-        <dataset-loader class="is-one-quarter"></dataset-loader>
+      <div class="column is-one-quarter">
+        <system-information></system-information>
+        <self-monitor-summary></self-monitor-summary>
+      </div>
         <dataset-loader></dataset-loader>
     </div>
   </div>
@@ -36,12 +16,14 @@
 <script>
   import SystemInformation from './LandingPage/SystemInformation'
   import DatasetLoader from './LandingPage/DatasetLoader'
+  import SelfMonitorSummary from './LandingPage/SelfMonitor/SelfMonitorSummary'
 
   export default {
     name: 'landing-page',
     components: {
       SystemInformation,
-      DatasetLoader
+      DatasetLoader,
+      SelfMonitorSummary
     },
     methods: {
       open (link) {
@@ -70,7 +52,7 @@
         rgba(229, 229, 229, .9) 100%
       );
     height: 100vh;
-    padding: 60px 80px;
+    padding: 30px 40px;
     width: 100vw;
   }
 
